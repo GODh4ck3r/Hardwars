@@ -11,10 +11,7 @@ app.use(express.static("assets"))
 app.set('views', resolve('./views'));
 
 app.use(express.urlencoded({extended:true}))
-app.all('/',(req,res)=>{
-    res.render('pages/home.ejs')
-})
-// app.use('/',mainRoute)
+app.use('/',mainRoute)
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}/`)
