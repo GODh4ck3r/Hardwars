@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,72 +8,204 @@
     <title>Hardwars 2023</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/css/home.css">
-    
+
     <!-- JS -->
     <script src="/js/home.js" defer></script>
 
 </head>
+
 <body>
     <%- include('../partials/header.ejs')%>
-    <section id="mainBody">
-        <div id="section1">
-            <div id="section1__left">
-                <div id="imageWapper">
-                    <img src="/images/mcu.png" alt="">
-                </div>
-                <h1>
-                    Declare War<br>
-                    Over<br>
-                    Hardwares
-                </h1>
-                <p>
-                    Secure hardware by making it secure,<br>
-                    We are Anonymous. We are Legion. We do not forgive.We do not forget.
-                </p>
-                <div id="section1__left__buttongroup">
-                    <a href="/register" class="bnt-style-1">
-                        Register
-                        <img src="/images/arrow.svg" alt="">
-                    </a>
+        <section id="mainBody">
+            <div id="section1" class="allHidden1">
+                <div id="section1__left">
+                    <div id="imageWapper">
+                        <img src="/images/mcu.png" alt="">
+                    </div>
+                    <h1>
+                        Declare War<br>
+                        Over<br>
+                        Hardwares
+                    </h1>
+                    <p>
+                        Secure hardware by making it secure,<br>
+                        We are Anonymous. We are Legion. We do not forgive.We do not forget.
+                    </p>
+                    <div id="section1__left__buttongroup">
+                        <a href="/register" class="bnt-style-1">
+                            Register
+                            <img src="/images/arrow.svg" alt="">
+                        </a>
 
-                    <a href="/topics" class="bnt-style-2">
-                        Topics
-                        <img src="/images/arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div id="section1__right">
-                <div id="cardWapper">
-                    <img id="cardWapper__img" src="/images/multiPoints.svg" alt="">
-                    <div class="wapper__section1Card">
-                        <div class="cardBorder"></div>
-                        <div class="section1Card">
-                            <img src="/images/creativity.png" alt="">
-                            <p>Think</p>
-                        </div>
-                    </div>
-                    <div class="wapper__section1Card">
-                        <div class="cardBorder"></div>
-                        <div class="section1Card">
-                            <p>Build</p>
-                            <img src="/images/build.png" alt="">
-                        </div>
-                    </div>
-                    <div class="wapper__section1Card">
-                        <div class="cardBorder"></div>
-                        <div class="section1Card">
-                            <img src="/images/ironMan.png" alt="">
-                            <p>Become Hero</p>
-                        </div>
+                        <a href="/topics" class="bnt-style-2">
+                            Topics
+                            <img src="/images/arrow.svg" alt="">
+                        </a>
                     </div>
                 </div>
-                <%- include('../partials/rasp.svg.ejs')%>
+                <div id="section1__right">
+                    <div id="cardWapper">
+                        <img id="cardWapper__img" src="/images/multiPoints.svg" alt="">
+                        <div class="wapper__section1Card">
+                            <div class="cardBorder"></div>
+                            <div class="section1Card">
+                                <img src="/images/creativity.png" alt="">
+                                <p>Think</p>
+                            </div>
+                        </div>
+                        <div class="wapper__section1Card">
+                            <div class="cardBorder"></div>
+                            <div class="section1Card">
+                                <p>Build</p>
+                                <img src="/images/build.png" alt="">
+                            </div>
+                        </div>
+                        <div class="wapper__section1Card">
+                            <div class="cardBorder"></div>
+                            <div class="section1Card">
+                                <img src="/images/ironMan.png" alt="">
+                                <p>Become Hero</p>
+                            </div>
+                        </div>
+                    </div>
+                    <%- include('../partials/rasp.svg.ejs')%>
+                </div>
             </div>
-        </div>
-        <div id="section2">
-            <div class="backdrop"></div>
-            <img class="backImg" src="/images/cpu.png" alt="">
-        </div>
-    </section>
+            <div id="section2" class="allHidden1">
+                <div class="transitionDIV">
+                    <img class="backImg" src="/images/cpu.png" alt="">
+                    <div class="backdrop"></div>
+                    <div id="section2__body">
+                        <h1>About</h1>
+                        <p>
+                            Secure hardware by making it secure,We are Anonymous. We are Legion. We do not forgive. We
+                            do<br>
+                            not forget.Secure hardware by making it secure,<br>
+                            We are Anonymous. We are Legion. We do not forgive. We do not forget.Secure hardware by
+                            making<br>
+                            it secure,<br>
+                            We are Anonymous. We are Legion. We do not forgive. We do not<br>
+                            forget.<br>
+                            <br>
+                            Secure hardware by making it secure,<br>
+                            We are Anonymous. We are Legion. We do not forgive. We do not forget.Secure hardware by
+                            making<br>
+                            it secure,<br>
+                            <br>
+                            Secure hardware by making it secure,We are Anonymous. We are Legion. We do not forgive. We
+                            do<br>
+                            not forget.Secure hardware by making it secure,We are Anonymous. We are Legion. We do
+                            not<br>
+                            forgive. We do not forget.Secure hardware by making it secure,We are Anonymous. We are
+                            Legion.<br>
+                            We do not forgive. We do not forget.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="section3" class="allHidden1">
+                <div class="transitionDIV">
+                    <img class="backImg" src="/images/uno.png" alt="">
+                    <div class="backdrop"></div>
+                    <div id="section3__body">
+                        <h1>Important Dates</h1>
+                        <div id="section3__cards">
+                            <div class="section3__card">
+                                <div class="cardDate">
+                                    <img src="/images/Calendar.png" alt="">
+                                    15 February 2023 - 23 February 2023
+                                </div>
+                                <p>
+                                    Event Details like This event is good and
+                                    I we all live in a matrix.
+                                    Really we all are living in a matrix
+                                </p>
+                            </div>
+                            <div class="section3__card">
+                                <div class="cardDate">
+                                    <img src="/images/Calendar.png" alt="">
+                                    15 February 2023 - 23 February 2023
+                                </div>
+                                <p>
+                                    Event Details like This event is good and
+                                    I we all live in a matrix.
+                                    Really we all are living in a matrix
+                                </p>
+                            </div>
+                            <div class="section3__card">
+                                <div class="cardDate">
+                                    <img src="/images/Calendar.png" alt="">
+                                    15 February 2023 - 23 February 2023
+                                </div>
+                                <p>
+                                    Event Details like This event is good and
+                                    I we all live in a matrix.
+                                    Really we all are living in a matrix
+                                </p>
+                            </div>
+                            <div class="section3__card">
+                                <div class="cardDate">
+                                    <img src="/images/Calendar.png" alt="">
+                                    15 February 2023 - 23 February 2023
+                                </div>
+                                <p>
+                                    Event Details like This event is good and
+                                    I we all live in a matrix.
+                                    Really we all are living in a matrix
+                                </p>
+                            </div>
+                            <div class="section3__card">
+                                <div class="cardDate">
+                                    <img src="/images/Calendar.png" alt="">
+                                    15 February 2023 - 23 February 2023
+                                </div>
+                                <p>
+                                    Event Details like This event is good and
+                                    I we all live in a matrix.
+                                    Really we all are living in a matrix
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section4" class="allHidden1">
+                <div class="transitionDIV">
+                    <div id="section4__body">
+                        <h1>Prizes</h1>
+                        <div id="section4__cards">
+                            <div class="section__card">
+                                <img src="/images/Award1.png" alt="">
+                                <p>
+                                    First Price<br>
+                                    Rs. 100,000
+                                </p>
+                            </div>
+                            
+                            <div class="section__card">
+                                <img src="/images/Award2.png" alt="">
+                                <p>
+                                    First Price<br>
+                                    Rs. 100,000
+                                </p>
+                            </div>
+                            
+                            <div class="section__card">
+                                <img src="/images/Award3.png" alt="">
+                                <p>
+                                    First Price<br>
+                                    Rs. 100,000
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <img class="backImg" src="/images/cpu.png" alt="">
+                    <div class="backdrop"></div>
+                    
+                </div>
+            </div>
+        </section>
 </body>
+
 </html>
