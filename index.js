@@ -10,7 +10,7 @@ app.use(express.static("assets"))
 
 app.use(express.urlencoded({extended:true}))
 app.all('/',(req,res)=>{
-    res.render('pages/home')
+    res.render('pages/home.ejs')
 })
 // app.use('/',mainRoute)
 
