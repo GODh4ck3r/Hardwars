@@ -1,0 +1,235 @@
+@import "./colors";
+
+$min-height: calc(100% - 5rem);
+$min-border-radius: 5px;
+
+
+#mainBody {
+    margin-top: 5rem;
+    min-height: $min-height;
+    display: flex;
+    flex-direction: column;
+}
+#section1 {
+    min-height: $min-height;
+    display: flex;
+    flex: 1;
+    #section1__left {
+        background-color: $Main-bgColor-Black;
+        flex: 1 1 50%;
+        min-height: 100%;
+        margin: 0.1rem 0;
+        position: relative;
+        padding-left: 1rem;
+        box-sizing: border-box;
+        color: $Main-textColor-Primary;
+
+        #imageWapper {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            // z-index: 200;
+            img {
+                position: absolute;
+                // top: -1.7rem;
+                top: 0;
+                right: 0;
+                height: 350px;
+                width: auto;
+                animation: moveRightToLeftWithOpacity 1500ms ease-out forwards;
+            }
+        }
+        h1 {
+            font-family: "Pirata One";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 6rem;
+            line-height: 122px;
+        }
+        p {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.1rem;
+            // line-height: 42px;
+        }
+        #section1__left__buttongroup{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            transform: translateX(-20%);
+        }
+    }
+
+    #section1__right {
+        min-height: 100%;
+        flex: 1 1 50%;
+        padding: 2rem 0 0 2rem;
+        #cardWapper{
+            position: relative;
+            width: fit-content;
+            transform: translateX(5%);
+            #cardWapper__img{
+                z-index: -100;
+            }
+            .wapper__section1Card{
+                position: absolute;
+                // display: flex;
+                &:nth-of-type(1){
+                    top: 0;
+                    left: 0;
+                    transform: translate(-20%,30%);
+                }
+                &:nth-of-type(2){
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-100%);
+                }
+                &:nth-of-type(3){
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(10%,-30%);
+                }
+                .cardBorder{
+                    position: absolute;
+                    left: 7px;bottom: -8px;
+                    background-color: $Main-bgColor-Primary;
+                    // background-color: aqua;
+                    border: 1px solid $Main-bgColor-Black;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: $min-border-radius;
+                }
+                .section1Card{
+                    // display: none !important;
+                    // position: absolute;
+                    // opacity: 0.5;
+                    display: inline-flex;
+                    justify-self: center;
+                    align-items: center;
+                    background-color: $Main-bgColor-Secondary;
+                    color: $Main-textColor-Primary;
+                    padding: 0.3rem 0.7rem;
+                    gap: 0.7rem;
+                    border-radius: $min-border-radius;
+                    transform: translateZ(1px);
+                    img{
+                        height: 2rem;
+                        width: auto;
+                    }
+                    p{
+                        font-family: 'Quicksand';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        line-height: 35px;
+                    }
+                    
+                }
+            }
+        }
+        #raspSvg{
+            path{
+                stroke: black;
+                stroke-width: 1px;
+                fill: transparent;
+            }
+            &.startAnim{
+                path{
+                    animation: svgAnimPath 6000ms 1000ms ease-in-out forwards;
+                }
+            }
+        }
+    }
+}
+
+#section2{
+
+}
+
+
+.bnt-style-2{
+    $trasitions : all 200ms;
+    background-color: $Main-bgColor-Black;
+    color: $Main-textColor-Primary;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: $trasitions;
+    display: inline-block;
+    opacity: 0.8;
+    // border-radius: 5px;
+    img{
+        height: 0.8rem;
+        width: auto;
+        transform: rotate(45deg);
+        transition: $trasitions;
+    }
+    &:hover{
+        opacity: 1;
+        img{
+            transform: rotate(0deg);
+        }
+        &::after{
+            color: $Main-textColor-Primary;
+            width: 100%;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        background-color: $Main-bgColor-Primary;
+        width: 0%;
+        height: 2px;
+        border-radius: 1rem;
+        left: 0;
+        bottom: 2px;
+        transition: $trasitions;
+
+    }
+}
+
+// animations
+@keyframes moveRightToLeftWithOpacity {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes moveTopToBottomWithOpacity {
+    from {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes svgAnimPath {
+    80%{
+        fill: black;
+        stroke-dashoffset: 0px;
+    }
+    100%{
+        fill: black;
+        stroke-dashoffset: 0px;
+        stroke-width: 0px;
+    }
+}
+

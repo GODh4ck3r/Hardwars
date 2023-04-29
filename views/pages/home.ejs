@@ -3,13 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Hardwars 2023</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/home.css">
+    
+    <!-- JS -->
+    <script src="/js/home.js" defer></script>
+
 </head>
 <body>
     <%- include('../partials/header.ejs')%>
     <section id="mainBody">
-        HOME
+        <div id="section1">
+            <div id="section1__left">
+                <div id="imageWapper">
+                    <img src="/images/mcu.png" alt="">
+                </div>
+                <h1>
+                    Declare War<br>
+                    Over<br>
+                    Hardwares
+                </h1>
+                <p>
+                    Secure hardware by making it secure,<br>
+                    We are Anonymous. We are Legion. We do not forgive.We do not forget.
+                </p>
+                <div id="section1__left__buttongroup">
+                    <a href="/register" class="bnt-style-1">
+                        Register
+                        <img src="/images/arrow.svg" alt="">
+                    </a>
+
+                    <a href="/topics" class="bnt-style-2">
+                        Topics
+                        <img src="/images/arrow.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="section1__right">
+                <div id="cardWapper">
+                    <img id="cardWapper__img" src="/images/multiPoints.svg" alt="">
+                    <div class="wapper__section1Card">
+                        <div class="cardBorder"></div>
+                        <div class="section1Card">
+                            <img src="/images/creativity.png" alt="">
+                            <p>Think</p>
+                        </div>
+                    </div>
+                    <div class="wapper__section1Card">
+                        <div class="cardBorder"></div>
+                        <div class="section1Card">
+                            <p>Build</p>
+                            <img src="/images/build.png" alt="">
+                        </div>
+                    </div>
+                    <div class="wapper__section1Card">
+                        <div class="cardBorder"></div>
+                        <div class="section1Card">
+                            <img src="/images/ironMan.png" alt="">
+                            <p>Become Hero</p>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../partials/rasp.svg.ejs')%>
+            </div>
+        </div>
+        <div id="section2">
+            
+        </div>
     </section>
 </body>
 </html>
