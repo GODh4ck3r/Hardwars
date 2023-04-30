@@ -21,11 +21,17 @@
     border-left: 4px solid #0f0;
     padding-left: 10px;
     margin-bottom: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
   }
   .header2 {
     border-left: 4px solid rgb(42, 30, 197);
     padding-left: 10px;
     margin-bottom: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
   }
   
   .content {
@@ -57,4 +63,3 @@
     height: 400px;
     width: 98%;
   }
-  
