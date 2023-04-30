@@ -3,7 +3,6 @@
 $min-height: calc(100% - 5rem);
 $min-border-radius: 5px;
 
-
 #mainBody {
     margin-top: 5rem;
     min-height: $min-height;
@@ -23,7 +22,7 @@ $min-border-radius: 5px;
         padding-left: 1rem;
         box-sizing: border-box;
         color: $Main-textColor-Primary;
-
+        border-radius: 0 $min-border-radius $min-border-radius 0;
         #imageWapper {
             position: absolute;
             height: 100%;
@@ -56,7 +55,7 @@ $min-border-radius: 5px;
             font-size: 1.1rem;
             // line-height: 42px;
         }
-        #section1__left__buttongroup{
+        #section1__left__buttongroup {
             margin-top: 2rem;
             display: flex;
             justify-content: center;
@@ -70,34 +69,35 @@ $min-border-radius: 5px;
         min-height: 100%;
         flex: 1 1 50%;
         padding: 2rem 0 0 2rem;
-        #cardWapper{
+        #cardWapper {
             position: relative;
             width: fit-content;
             transform: translateX(5%);
-            #cardWapper__img{
+            #cardWapper__img {
                 z-index: -100;
             }
-            .wapper__section1Card{
+            .wapper__section1Card {
                 position: absolute;
                 // display: flex;
-                &:nth-of-type(1){
+                &:nth-of-type(1) {
                     top: 0;
                     left: 0;
-                    transform: translate(-20%,30%);
+                    transform: translate(-20%, 30%);
                 }
-                &:nth-of-type(2){
+                &:nth-of-type(2) {
                     top: 50%;
                     right: 0;
                     transform: translateY(-100%);
                 }
-                &:nth-of-type(3){
+                &:nth-of-type(3) {
                     bottom: 0;
                     left: 0;
-                    transform: translate(10%,-30%);
+                    transform: translate(10%, -30%);
                 }
-                .cardBorder{
+                .cardBorder {
                     position: absolute;
-                    left: 7px;bottom: -8px;
+                    left: 7px;
+                    bottom: -8px;
                     background-color: $Main-bgColor-Primary;
                     // background-color: aqua;
                     border: 1px solid $Main-bgColor-Black;
@@ -105,7 +105,7 @@ $min-border-radius: 5px;
                     width: 100%;
                     border-radius: $min-border-radius;
                 }
-                .section1Card{
+                .section1Card {
                     // display: none !important;
                     // position: absolute;
                     // opacity: 0.5;
@@ -118,29 +118,28 @@ $min-border-radius: 5px;
                     gap: 0.7rem;
                     border-radius: $min-border-radius;
                     transform: translateZ(1px);
-                    img{
+                    img {
                         height: 2rem;
                         width: auto;
                     }
-                    p{
-                        font-family: 'Quicksand';
+                    p {
+                        font-family: "Quicksand";
                         font-style: normal;
                         font-weight: 700;
                         font-size: 1.5rem;
                         line-height: 35px;
                     }
-                    
                 }
             }
         }
-        #raspSvg{
-            path{
+        #raspSvg {
+            path {
                 stroke: black;
                 stroke-width: 1px;
                 fill: transparent;
             }
-            &.startAnim{
-                path{
+            &.startAnim {
+                path {
                     animation: svgAnimPath 6000ms 1000ms ease-in-out forwards;
                 }
             }
@@ -148,17 +147,274 @@ $min-border-radius: 5px;
     }
 }
 
-#section2{
+#section2 {
     min-height: $min-height;
-    display: flex;
     flex: 1;
+    .transitionDIV {
+        position: relative;
+        display: flex;
+        z-index: 10;
+        .backImg {
+            z-index: -1;
+            flex: 1 1 40%;
+        }
+        .backdrop {
+            z-index: 1;
+        }
+        #section2__body {
+            z-index: 5;
+            flex: 1 1 50%;
+            background-color: white;
+            margin: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 1rem;
+            border-radius: $min-border-radius;
+            h1 {
+                font-family: "Pirata One";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 60px;
+                line-height: 77px;
+                margin: 0;
+                text-align: center;
+                padding: 0 1rem;
+                width: fit-content;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $Main-bgColor-Black;
+                    border-radius: 1rem;
+                    left: 0;
+                    bottom: 5px;
+                }
+            }
+            p {
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
 }
 
+#section3 {
+    min-height: $min-height;
+    flex: 1;
+    .transitionDIV {
+        position: relative;
+        display: flex;
+        z-index: 10;
+        .backImg {
+            z-index: -1;
+            height: 100%;
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .backdrop {
+            z-index: 1;
+        }
+        #section3__body {
+            z-index: 5;
+            flex: 1 1 50%;
+            // background-color: white;
+            margin: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 1rem;
+            border-radius: $min-border-radius;
+            h1 {
+                font-family: "Pirata One";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 60px;
+                line-height: 77px;
+                margin: 0;
+                text-align: center;
+                padding: 0 1rem;
+                width: fit-content;
+                position: relative;
+                color: $Main-textColor-Primary;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $Main-textColor-Primary;
+                    border-radius: 1rem;
+                    left: 0;
+                    bottom: 5px;
+                }
+            }
+            #section3__cards {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem 2rem;
+                .section3__card {
+                    max-width: 400px;
+                    background-color: rgba(
+                        $color: $Main-textColor-Primary,
+                        $alpha: 0.4
+                    );
+                    border-radius: $min-border-radius;
+                    color: $Main-textColor-Primary;
+                    padding: 0.5rem;
+                    font-family: "Poppins";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+                    backdrop-filter: blur(10px);
+                    .cardDate {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        color: $Main-bgColor-Secondary;
+                    }
+                }
+            }
+        }
+    }
+}
 
+#section4 {
+    min-height: $min-height;
+    flex: 1;
+    .transitionDIV {
+        position: relative;
+        display: flex;
+        z-index: 10;
+        .backImg {
+            z-index: -1;
+            flex: 1 1 40%;
+        }
+        .backdrop {
+            z-index: 1;
+        }
+        #section4__body {
+            z-index: 5;
+            flex: 1 1 50%;
+            // background-color: white;
+            margin: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 1rem;
+            border-radius: $min-border-radius;
+            h1 {
+                font-family: "Pirata One";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 60px;
+                line-height: 77px;
+                margin: 0;
+                text-align: center;
+                padding: 0 1rem;
+                width: fit-content;
+                position: relative;
+                color: $Main-textColor-Primary;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $Main-textColor-Primary;
+                    border-radius: 1rem;
+                    left: 0;
+                    bottom: 5px;
+                }
+            }
+            #section4__cards {
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                row-gap: 2rem;
+                .section__card {
+                    background-color: $Main-textColor-Primary;
+                    border-radius: 0 $min-border-radius 0 $min-border-radius;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    gap: 1rem;
+                    min-width: 300px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 10px;
+                        left: 0.3rem;
+                        height: 60%;
+                        width: 6px;
+                        border-radius: 1rem;
+                        background-color: black;
+                    }
+                    &:nth-of-type(1){
+                        &::after{
+                            background-color: #FEAF00;
 
+                        }
+                    }
+                    &:nth-of-type(2){
+                        &::after{
+                            background-color: #C4CAF3;
 
-.bnt-style-2{
-    $trasitions : all 200ms;
+                        }
+                    }
+                    &:nth-of-type(3){
+                        &::after{
+                            background-color: #E4624C;
+
+                        }
+                    }
+                    img{
+                        height: 4.5rem;
+                        width: auto;
+                    }
+                    p {
+                        font-family: "Poppins";
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 1.1rem;
+                        line-height: 30px;
+                        flex: 1;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bnt-style-2 {
+    $trasitions: all 200ms;
     background-color: $Main-bgColor-Black;
     color: $Main-textColor-Primary;
     padding: 0.5rem 1rem;
@@ -172,24 +428,24 @@ $min-border-radius: 5px;
     display: inline-block;
     opacity: 0.8;
     // border-radius: 5px;
-    img{
+    img {
         height: 0.8rem;
         width: auto;
         transform: rotate(45deg);
         transition: $trasitions;
     }
-    &:hover{
+    &:hover {
         opacity: 1;
-        img{
+        img {
             transform: rotate(0deg);
         }
-        &::after{
+        &::after {
             color: $Main-textColor-Primary;
             width: 100%;
         }
     }
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         position: absolute;
         background-color: $Main-bgColor-Primary;
         width: 0%;
@@ -198,10 +454,12 @@ $min-border-radius: 5px;
         left: 0;
         bottom: 2px;
         transition: $trasitions;
-
     }
 }
-.backdrop{
+.transitionDIV {
+    transition: opacity 400ms;
+}
+.backdrop {
     position: absolute;
     inset: 0;
     height: 100%;
@@ -210,7 +468,7 @@ $min-border-radius: 5px;
     opacity: 0.2;
     backdrop-filter: blur(2px);
 }
-.backImg{
+.backImg {
     height: 100%;
     width: 50%;
     object-fit: cover;
@@ -240,14 +498,13 @@ $min-border-radius: 5px;
 }
 
 @keyframes svgAnimPath {
-    80%{
+    80% {
         fill: black;
         stroke-dashoffset: 0px;
     }
-    100%{
+    100% {
         fill: black;
         stroke-dashoffset: 0px;
         stroke-width: 0px;
     }
 }
-
