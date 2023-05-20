@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import "./controllers/dbConnect.js"
 import express  from "express";
 import mainRoute from "./routers/mainRoute.js";
