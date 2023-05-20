@@ -1,6 +1,9 @@
+// import "./controllers/dbConnect.js"
 import express  from "express";
 import mainRoute from "./routers/mainRoute.js";
 import {resolve} from 'path'
+
+
 
 const app = express()
 const PORT = process.env.PORT || 4444
