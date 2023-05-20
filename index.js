@@ -1,7 +1,8 @@
-// import "./controllers/dbConnect.js"
+import "./controllers/dbConnect.js"
 import express  from "express";
 import mainRoute from "./routers/mainRoute.js";
 import {resolve} from 'path'
+import api from "./routers/api.js";
 
 
 
@@ -14,7 +15,9 @@ app.use(express.static("assets"))
 app.set('views', resolve('./views'));
 
 app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 app.use('/',mainRoute)
+app.use('/api',api)
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}/`)
