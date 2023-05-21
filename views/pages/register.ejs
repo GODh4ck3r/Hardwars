@@ -7,6 +7,12 @@
     <title>Hardwars 2023</title>
 
 </head>
+<script src="path/to/jquery.js"></script>
+<script src="path/to/jquery.nice-select.js"></script>
+<script src="path/to/jquery.validate.js">
+$(document).ready(function(){
+$('select').niceSelect();
+})</script>
 <body>
     <%- include('../partials/header.ejs')%>
     <section id="mainBody">
@@ -21,6 +27,7 @@
                         <option value="data1">Menu1 </option>
                         <option value="data2">Menu2 </option>
                         <option value="data3">Menu3 </option>
+                    
                     </select>
                 </div>
                 <div class="member-box">
