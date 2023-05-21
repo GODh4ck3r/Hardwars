@@ -1,3 +1,5 @@
+@import "./colors";
+
 $primary-color: #232323;
 $secondary-color: #f2f2f2;
 $font-primary: 'Quicksand', sans-serif;
@@ -9,9 +11,6 @@ $font-primary: 'Quicksand', sans-serif;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
 
 body {
   font-family: $font-primary;
@@ -20,129 +19,18 @@ body {
   color: $secondary-color;
 }
 
+
+
+#mainBody{
+  height: 100%;
+  overflow: auto;
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
-
-#mainBody {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+form,.regi,.member-box{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/back.png');
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-}
-
-.team-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-  box-sizing: border-box;
-}
-
-.form-box {
-  position: absolute;
-  width: 400px; /* Adjust the width as desired */
-  max-width: 90%; /* Limit the maximum width to 90% of the viewport */
-  height: auto; /* Allow the height to adjust based on content */
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  padding: 3rem;
-  background: rgba(1, 0, 1, 0.7);
-  backdrop-filter: blur(5px);
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.team-name {
-  position: absolute;
-  width: 163px;
-  height: 35px;
-  left: 410px;
-  top: 50px;
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 35px;
-  color: #FFFFFF;
-}
-
-.mentor-name {
-  position: absolute;
-  width: 186px;
-  height: 35px;
-  left: 600px;
-  top: 50px;
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 35px;
-  color: #FFFFFF;
-}
-
-.team-box {
-  background-color: $secondary-color;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-.member-box {
-  background-color: $secondary-color;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"] {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: none;
-  border-bottom: 2px solid $secondary-color;
-  background-color: transparent;
-  color: $secondary-color;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-  outline: none;
-  border-bottom: 2px solid $secondary-color;
-}
-
-
-
-button[type="register"] {
-  display: block;
-  width: 100%;
-  padding: 1.5rem;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 3rem;
-  background-color: #333333;
-  color: $secondary-color;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="register"]:hover {
-  background-color: darken($secondry-color, 10%);
+  flex-direction: column;  
 }
