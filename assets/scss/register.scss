@@ -10,9 +10,15 @@ $min-border-radius: 5px;
 
 #mainBody {
   margin-top: 5rem;
-  min-height: $min-height;
+  max-height: $min-height;
   display: flex;
   flex-direction: column;
+  img{
+    position: absolute;
+    left: 0;top: 0;
+    height: 100%;width: 100%;
+    z-index: 10;
+  }
 }
 
 
@@ -31,14 +37,13 @@ body {
   color: $secondary-color;
 }
 
-
-
-// #mainBody{
-//   height: 100%;
-//   overflow: auto;
-// }
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+}
+.form-box{
+  z-index: 20;
+  height: $min-height;
+  overflow: scroll;
 }
 form,.regi,.member-box{
   display: flex;
