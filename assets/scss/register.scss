@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .member-box {
   background-color: $secondary-color;
   padding: 1rem;
+  margin-bottom: 1rem;
   border-radius: 8px;
 }
 
@@ -132,6 +133,7 @@ button[type="register"] {
   display: block;
   width: 100%;
   padding: 1.5rem;
+  margin-top: 1rem;
   border: none;
   border-radius: 3rem;
   background-color: #333333;
@@ -142,5 +144,5 @@ button[type="register"] {
 }
 
 button[type="register"]:hover {
-  background-color: darken($secondary-color, 10%);
+  background-color: darken($secondry-color, 10%);
 }
