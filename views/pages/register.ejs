@@ -93,20 +93,66 @@ $('select').niceSelect();
             </form>
         </div>
     </section>
+    
     <script>
-        // $(document).ready(function() {
-        //     $('select').niceSelect();
-        // });
-
-        $.ajax("/api/topics",{
-            success:(data)=>{
-                // document.body.innerHTML = `<p>${JSON.stringify(data)}</p>`
-                console.log(data)
-            }
-        })
-
-
-
+        $(document).ready(function() {
+            $('select').niceSelect();
+    
+            $('.reg').submit(function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+    
+                // Get the form data
+                var formData = {
+                    teamName: $('#team-name').val(),
+                    mentorName: $('#mentor-name').val(),
+                    topic: $('select').val(),
+                    members: [
+                        {
+                            name: $('#member-name1').val(),
+                            college: $('#college1').val(),
+                            city: $('#city1').val(),
+                            mobile: $('#mobile1').val(),
+                            email: $('#email1').val()
+                        },
+                        {
+                            name: $('#member-name2').val(),
+                            college: $('#college2').val(),
+                            city: $('#city2').val(),
+                            mobile: $('#mobile2').val(),
+                            email: $('#email2').val()
+                        },
+                        {
+                            name: $('#member-name3').val(),
+                            college: $('#college3').val(),
+                            city: $('#city3').val(),
+                            mobile: $('#mobile3').val(),
+                            email: $('#email3').val()
+                        },
+                        {
+                            name: $('#member-name4').val(),
+                            college: $('#college4').val(),
+                            city: $('#city4').val(),
+                            mobile: $('#mobile4').val(),
+                            email: $('#email4').val()
+                        }
+                    ]
+                };
+    
+                $.ajax({
+                    url: '/register', 
+                    type: 'POST',
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        console.log('Registration successful');
+                    },
+                    error: function(error) {
+                        console.log('Registration failed');
+                    }
+                });
+            });
+        });
     </script>
+    
 </body>
 </html>
