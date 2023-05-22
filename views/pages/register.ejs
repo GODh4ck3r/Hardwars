@@ -94,9 +94,19 @@ $('select').niceSelect();
         </div>
     </section>
     <script>
-        $(document).ready(function() {
-            $('select').niceSelect();
-        });
+        // $(document).ready(function() {
+        //     $('select').niceSelect();
+        // });
+
+        $.ajax("/api/topics",{
+            success:(data)=>{
+                // document.body.innerHTML = `<p>${JSON.stringify(data)}</p>`
+                console.log(data)
+            }
+        })
+
+
+
     </script>
 </body>
 </html>

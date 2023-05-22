@@ -49,7 +49,7 @@ async function getTopics(){
     try {
         var topics = await topicsModel.find({}).select("name")
         return {
-            status: false,
+            status: true,
             topics
         }
     } catch (error) {
