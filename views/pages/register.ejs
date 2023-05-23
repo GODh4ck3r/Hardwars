@@ -26,7 +26,7 @@ $('select').niceSelect();
                     <input type="text" id="team-name" name="team-name" required>
                     <label for="mentor-name">Mentor Name:</label>
                     <input type="text" id="mentor-name" name="mentor-name" required>
-                    <select>
+                    <select id="selects">
                         <option  value="6468f14536277caa7e4deaaf">topic-1 </option>
                         <option  value="6468f17436277caa7e4deab0">topic-2 </option>
                         <option  value="6468f18336277caa7e4deab1">topic-3 </option>
@@ -97,47 +97,50 @@ $('select').niceSelect();
     <script>
         $(document).ready(function() {
             $('select').niceSelect();
+
+            document.getElementById('selects').innerHTML = '<option value="6969">New Topic1</option>';
+
     
             $('.reg').submit(function(event) {
                 event.preventDefault(); // Prevent the form from submitting normally
     
-                // Get the form data
+                
                 var formData = {
                     teamName: $('#team-name').val(),
                     mentorName: $('#mentor-name').val(),
                     topic: $('select').val(),
-                    members: [
-                        {
+                    
+                       member1: {
                             name: $('#member-name1').val(),
                             college: $('#college1').val(),
                             city: $('#city1').val(),
                             mobile: $('#mobile1').val(),
                             email: $('#email1').val()
                         },
-                        {
+                        member2:{
                             name: $('#member-name2').val(),
                             college: $('#college2').val(),
                             city: $('#city2').val(),
                             mobile: $('#mobile2').val(),
                             email: $('#email2').val()
                         },
-                        {
+                        member3:{
                             name: $('#member-name3').val(),
                             college: $('#college3').val(),
                             city: $('#city3').val(),
                             mobile: $('#mobile3').val(),
                             email: $('#email3').val()
                         },
-                        {
+                        member4:{
                             name: $('#member-name4').val(),
                             college: $('#college4').val(),
                             city: $('#city4').val(),
                             mobile: $('#mobile4').val(),
                             email: $('#email4').val()
                         }
-                    ]
+                    
                 };
-    
+    //sending the form data
                 $.ajax({
                     url: '/register', 
                     type: 'POST',
