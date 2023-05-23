@@ -45,13 +45,14 @@ h1, h2, h3, h4, h5, h6 {
   height: $min-height;
   overflow: scroll;
 
-  position: absolute;
+  // position: absolute;
   width: 400px; 
-  max-width: 90%; 
+  margin: auto;
+  // max-width: 90%; 
   height: auto; 
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
+  // left: 50%;
+  // top: 60%;
+  // transform: translate(-50%, -50%);
   padding: 3rem;
   background: rgba(1, 0, 1, 0.7);
   backdrop-filter: blur(5px);
@@ -65,11 +66,11 @@ form,.regi,.member-box{
   flex-direction: column;  
 }
 .team-name {
-  position: absolute;
-  width: 163px;
-  height: 35px;
-  left: 410px;
-  top: 50px;
+  // position: absolute;
+  // width: 163px;
+  // height: 35px;
+  // left: 410px;
+  // top: 50px;
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 700;
@@ -79,11 +80,11 @@ form,.regi,.member-box{
 }
 
 .mentor-name {
-  position: absolute;
-  width: 186px;
-  height: 35px;
-  left: 600px;
-  top: 50px;
+  // // position: absolute;
+  // width: 186px;
+  // height: 35px;
+  // left: 600px;
+  // top: 50px;
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 700;
@@ -97,7 +98,7 @@ form,.regi,.member-box{
   border-radius: 8px;
 }
 .member-box {
-  background-color: $secondary-color;
+  // background-color: $secondary-color;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
@@ -138,7 +139,7 @@ button[type="register"] {
 }
 
 button[type="register"]:hover {
-  background-color: darken($secondry-color, 10%);
+  background-color: darken($secondary-color, 10%);
 }
 html,body{
   overflow:hidden;
