@@ -8,22 +8,25 @@ $min-height: calc(100% - 5rem);
 $min-border-radius: 5px;
 
 #mainBody {
-  margin-top: 5rem;
+  margin-top: 10rem;
   max-height: $min-height;
   display: flex;
   flex-direction: column;
+  align-items: rightS;
+  height: calc(100% - 5rem);
+  position:relative;
   img{
     position: absolute;
     left: 0;top: 0;
     height: 100%;width: 100%;
     z-index: 10;
+    margin-top: -5rem;
   }
 }
 .nice-select{
   color:rgba(1, 0, 1, 0.7);
 }
 
-/* global styles */
 * {
   margin: 0;
   padding: 0;
@@ -45,12 +48,18 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 20;
   height: $min-height;
   overflow: scroll;
-
-  // position: absolute;
-  width: 400px; 
+  // display: none;
+  -ms-overflow-style: none;
+   scrollbar-width: none; 
+   &::-webkit-scrollbar {
+    display: none;
+  }
+  // position: absolute; 
+  left:410px;
+  top:252px;
   margin: auto;
-  // max-width: 90%; 
-  height: auto; 
+  width: 40%; 
+  height: 773px; 
   // left: 50%;
   // top: 60%;
   // transform: translate(-50%, -50%);
@@ -60,6 +69,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 15px 15px 0px 0px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+.separation {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 466px; /* Adjust the top value as needed */
+  border-bottom: 1px dashed #FFFFFF;
+}
+
 form,.regi,.member-box{
   display: flex;
   justify-content: center;
@@ -80,6 +99,16 @@ form,.regi,.member-box{
   color: #FFFFFF;
 }
 
+.separation{box-sizing: border-box;
+
+  position: absolute;
+  width: 614px;
+  height: 3px;
+  left: 440px;
+  top: 466px;
+  
+  border-bottom: 1px dashed #FFFFFF;}
+
 .mentor-name {
   // // position: absolute;
   // width: 186px;
@@ -97,6 +126,7 @@ form,.regi,.member-box{
   background-color: $secondary-color;
   padding: 1rem;
   border-radius: 8px;
+  display: inline-block;
 }
 .member-box {
   // background-color: $secondary-color;
@@ -126,21 +156,35 @@ input[type="email"]:focus {
   border-bottom: 2px solid $secondary-color;
 }
 button[type="register"] {
-  display: block;
-  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  width: 255px;
+  height: 70px;
+  left: 611px;
+  top: 923px;
+  background: #010001;
+  border: 3px solid #F9EBFF;
+  border-radius: 10px;
+  
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
   padding: 1.5rem;
   margin-top: 1rem;
   border: none;
   border-radius: 3rem;
   background-color: #333333;
-  color: $secondary-color;
-  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button[type="register"]:hover {
+  background-color: #343232;
   background-color: darken($secondary-color, 10%);
+  transform: scale(1.05);
 }
 html,body{
   overflow:hidden;
