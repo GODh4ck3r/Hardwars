@@ -44,6 +44,7 @@ header{
     top: 0;left: 0;
     z-index: 100;
     width: 100%;
+    // background-color: darken($color: $Main-bgColor-Black, $amount: 20);
     background-color: $Main-bgColor-Black;
     height: 5rem;
     display: flex;
@@ -129,4 +130,9 @@ header{
 }
 .allHidden{
     display: none !important;
+}
+
+#mainLogo{
+    height: 100%;
+    width: auto;
 }

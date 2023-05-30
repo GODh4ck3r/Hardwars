@@ -1,18 +1,16 @@
 @import "./colors";
 
-$primary-color: #232323;
-$secondary-color: #f2f2f2;
-$font-primary: 'Quicksand', sans-serif;
+
 
 $min-height: calc(100% - 5rem);
 $min-border-radius: 5px;
 
 #mainBody {
-  margin-top: 10rem;
+  margin-top: 5rem;
   max-height: $min-height;
   display: flex;
   flex-direction: column;
-  align-items: rightS;
+  align-items: center;
   height: calc(100% - 5rem);
   position:relative;
   img{
@@ -20,11 +18,8 @@ $min-border-radius: 5px;
     left: 0;top: 0;
     height: 100%;width: 100%;
     z-index: 10;
-    margin-top: -5rem;
+    // margin-top: -5rem;
   }
-}
-.nice-select{
-  color:rgba(1, 0, 1, 0.7);
 }
 
 * {
@@ -35,157 +30,136 @@ $min-border-radius: 5px;
 
 
 body {
-  font-family: $font-primary;
-  font-size: 1.6rem;
-  background-color: $primary-color;
-  color: $secondary-color;
+  background-color: $Main-bgColor-Primary;
+  color: $Main-textColor-Primary;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-.form-box{
-  z-index: 20;
-  height: $min-height;
-  overflow: scroll;
-  // display: none;
-  -ms-overflow-style: none;
-   scrollbar-width: none; 
-   &::-webkit-scrollbar {
-    display: none;
-  }
-  // position: absolute; 
-  left:410px;
-  top:252px;
-  margin: auto;
-  width: 40%; 
-  height: 773px; 
-  // left: 50%;
-  // top: 60%;
-  // transform: translate(-50%, -50%);
-  padding: 3rem;
-  background: rgba(1, 0, 1, 0.7);
-  backdrop-filter: blur(5px);
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-.separation {
-  box-sizing: border-box;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 0;
-  top: 466px; /* Adjust the top value as needed */
-  border-bottom: 1px dashed #FFFFFF;
-}
 
-form,.regi,.member-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;  
-}
-.team-name {
-  // position: absolute;
-  // width: 163px;
-  // height: 35px;
-  // left: 410px;
-  // top: 50px;
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 35px;
-  color: #FFFFFF;
-}
 
-.separation{box-sizing: border-box;
-
-  position: absolute;
-  width: 614px;
-  height: 3px;
-  left: 440px;
-  top: 466px;
-  
-  border-bottom: 1px dashed #FFFFFF;}
-
-.mentor-name {
-  // // position: absolute;
-  // width: 186px;
-  // height: 35px;
-  // left: 600px;
-  // top: 50px;
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 35px;
-  color: #FFFFFF;
-}
-.team-box {
-  background-color: $secondary-color;
-  padding: 1rem;
-  border-radius: 8px;
-  display: inline-block;
-}
-.member-box {
-  // background-color: $secondary-color;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-input[type="text"],
-input[type="email"] {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: none;
-  border-bottom: 2px solid $secondary-color;
-  background-color: transparent;
-  color: $secondary-color;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-  outline: none;
-  border-bottom: 2px solid $secondary-color;
-}
-button[type="register"] {
-  box-sizing: border-box;
-  position: absolute;
-  width: 255px;
-  height: 70px;
-  left: 611px;
-  top: 923px;
-  background: #010001;
-  border: 3px solid #F9EBFF;
-  border-radius: 10px;
-  
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 35px;
-  color: #FFFFFF;
-  padding: 1.5rem;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 3rem;
-  background-color: #333333;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="register"]:hover {
-  background-color: #343232;
-  background-color: darken($secondary-color, 10%);
-  transform: scale(1.05);
-}
 html,body{
   overflow:hidden;
 }
+
+.form-box{
+  z-index: 100;
+  font-family: Quicksand;
+  overflow: scroll;
+  padding-top: 10rem;
+  width: 100%;
+  label,input{
+    font-size: 1rem;
+    display: table-cell;
+  }
+  label{
+    font-weight: bold;
+    font-size: 1.1rem;
+    vertical-align: middle;
+  }
+  .nice-select{
+    background-color: rgba($color: #D9D9D9, $alpha: 0.3);
+    color: $Main-textColor-Primary;
+    border: none;
+    border-radius: 3px;
+    li,span{
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    ul,li{
+      background-color: #424040 !important;
+    }
+    li{
+      &:hover{
+        background-color: darken($color: #424040, $amount: 10) !important;
+      }
+      &.selected{
+        background-color: darken($color: #424040, $amount: 10) !important;
+      }
+    }
+  }
+
+  input{
+    border: none;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 1px solid #ffffff;
+    padding: 0.5rem 0.3rem;
+    background-color: rgba($color: #D9D9D9, $alpha: 0.3);
+    color: $Main-textColor-Primary;
+    &:focus{
+      outline: none;
+    }
+  }
+
+  h2{
+    font-size: 1.7rem;
+    position: relative;
+    width: fit-content;
+    &:after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 30%;
+      bottom: 0px;left: 0px;
+      border-radius: 1rem;
+      background-color: #eee;
+    }
+  }
+  #regForm{
+    margin: 0 auto;
+    width: fit-content;
+    background-color:rgba($color: $Main-bgColor-Black, $alpha: 0.9);
+    backdrop-filter: blur(3px);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    .inputBox{
+      display: table-row;
+      // background-color: cornflowerblue;
+    }
+    .box{
+      display: table;
+      border-collapse: separate;
+
+      border-spacing: 0.5rem 0.5rem;
+    }
+    .teamBox{
+      border-spacing: 1rem 0.5rem;
+    }
+    #members{
+      .box{
+        margin-top: 1rem;
+      } 
+    }
+  }
+}
+
+button{
+  // border: none;
+  border-radius: 5px;
+  border: 2px solid #eee;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  color: #eee;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 200ms;
+  font-family: 'Poppins';
+  &:hover{
+    background-color: #eee;
+    color: #010001;
+    // border-color: #0091f4;
+  }
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.removeScrollBar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+

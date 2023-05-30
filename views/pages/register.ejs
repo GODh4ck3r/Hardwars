@@ -1,163 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="\css\register.css">
 
 <head>
     <meta charset="UTF-8">
     <title>Hardwars 2023</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/jquery.nice-select.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <!-- JS -->
+    <script src="/js/jquery.js" defer></script>
+    <script src="/js/jquery.nice-select.min.js" defer></script>
+    <script src="/js/register.js" defer></script>
 </head>
-<!-- <script src="path/to/jquery.js"></script>
-<script src="path/to/jquery.nice-select.js"></script>
-<script src="path/to/jquery.validate.js"> -->
-<!-- $(document).ready(function(){
-$('select').niceSelect();
-})</script> -->
+
 <body>
     <%- include('../partials/header.ejs')%>
-    <section id="mainBody">
-        <img src="/images/back.png" alt="">
-        <div class="form-box">
-            <form class="reg">
-                <div class="regi">
-                    <label for="team-name">Team Name:</label>
-                    <input type="text" id="team-name" name="team-name" required>
-                    <label for="mentor-name">Mentor Name:</label>
-                    <input type="text" id="mentor-name" name="mentor-name" required>
-                    <select id="selects">
-                        <option  value="6468f14536277caa7e4deaaf">topic-1 </option>
-                        <option  value="6468f17436277caa7e4deab0">topic-2 </option>
-                        <option  value="6468f18336277caa7e4deab1">topic-3 </option>
-                    
-                    </select>
-                </div>
-                <div class="separation"></div>
+        <section id="mainBody">
+            <img src="/images/back.png" alt="">
+            <div class="form-box removeScrollBar">
+                <form id="regForm">
+                    <div class="box teamBox">
+                        <div class="inputBox">
+                            <label for="mentor-name">Mentor Name</label>
+                            <input type="text" id="mentor-name" name="mentor-name" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="team-name">Team Name</label>
+                            <input type="text" id="team-name" name="team-name" required>
+                        </div>
+                        <div class="inputBox">
+                            <label>Topic</label>
+                            <select name="selectedTopic" class="wide">
+                                <option value="name">Name</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>
+                    </div>
 
-                <div class="member-box">
-                   <h2>Member1</h2>
-                    <label for="member-name">Name</label>
-                <input type="text" id="member-name" name="member-name" required>
-                <label for="college">College</label>
-                <input type="text" id="college" name="college" required>
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
-                <label for="mobile">Mobile Number</label>
-                <input type="text" id="mobile" name="mobile" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                    <div id="members">
+                        <% for (var i=1; i <=4; i++ ) { %>
+                            <div class="box">
+                                <h2>Member <%= i %>
+                                </h2>
+                                <div class="member-box-grid">
+                                    <div class="inputBox">
+                                        <label for="member-name-<%= i %>">Name</label>
+                                        <input type="text" id="member-name-<%= i %>" name="member-name-<%= i %>" required>
+                                    </div>
+                                    <div class="inputBox">
+                                        <label for="college-<%= i %>">College</label>
+                                        <input type="text" id="college-<%= i %>" name="college-<%= i %>" required>
+                                    </div>
+                                    <div class="inputBox">
+                                        <label for="city-<%= i %>">City</label>
+                                        <input type="text" id="city-<%= i %>" name="city-<%= i %>" required>
+                                    </div>
+                                    <div class="inputBox">
+                                        <label for="mobile-<%= i %>">Mobile Number</label>
+                                        <input type="text" id="mobile-<%= i %>" name="mobile-<%= i %>" required>
+                                    </div>
+                                    <div class="inputBox">
+                                        <label for="email-<%= i %>">Email</label>
+                                        <input type="email" id="email-<%= i %>" name="email-<%= i %>" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
 
+                    <div style="display: flex;justify-content: flex-end; align-items: center;">
+                        <button id="subBnt">Register</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-                <h2>Member2</h2>
-                    <label for="member-name">Name</label>
-                <input type="text" id="member-name" name="member-name" required>
-                <label for="college">College</label>
-                <input type="text" id="college" name="college" required>
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
-                <label for="mobile">Mobile Number</label>
-                <input type="text" id="mobile" name="mobile" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-
-
-                <h2>Member3</h2>
-                    <label for="member-name">Name</label>
-                <input type="text" id="member-name" name="member-name" required>
-                <label for="college">College</label>
-                <input type="text" id="college" name="college" required>
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
-                <label for="mobile">Mobile Number</label>
-                <input type="text" id="mobile" name="mobile" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-
-
-                <h2>Member4</h2>
-                    <label for="member-name">Name</label>
-                <input type="text" id="member-name" name="member-name" required>
-                <label for="college">College</label>
-                <input type="text" id="college" name="college" required>
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
-                <label for="mobile">Mobile Number</label>
-                <input type="text" id="mobile" name="mobile" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <button type="submit">Register</button>
-                
-                </div>
-            </form>
-        </div>
-    </section>
-    
-    <script>
-        $(document).ready(function() {
-            $('select').niceSelect();
-
-            document.getElementById('selects').innerHTML = '<option value="6969">New Topic1</option>';
-
-    
-            $('.reg').submit(function(event) {
-                event.preventDefault(); // Prevent the form from submitting normally
-    
-                
-                var formData = {
-                    teamName: $('#team-name').val(),
-                    mentorName: $('#mentor-name').val(),
-                    topic: $('select').val(),
-                    
-                       member1: {
-                            name: $('#member-name1').val(),
-                            college: $('#college1').val(),
-                            city: $('#city1').val(),
-                            mobile: $('#mobile1').val(),
-                            email: $('#email1').val()
-                        },
-                        member2:{
-                            name: $('#member-name2').val(),
-                            college: $('#college2').val(),
-                            city: $('#city2').val(),
-                            mobile: $('#mobile2').val(),
-                            email: $('#email2').val()
-                        },
-                        member3:{
-                            name: $('#member-name3').val(),
-                            college: $('#college3').val(),
-                            city: $('#city3').val(),
-                            mobile: $('#mobile3').val(),
-                            email: $('#email3').val()
-                        },
-                        member4:{
-                            name: $('#member-name4').val(),
-                            college: $('#college4').val(),
-                            city: $('#city4').val(),
-                            mobile: $('#mobile4').val(),
-                            email: $('#email4').val()
-                        }
-                    
-                };
-    //sending the form data
-                $.ajax({
-                    url: '/register', 
-                    type: 'POST',
-                    data: JSON.stringify(formData),
-                    contentType: 'application/json',
-                    success: function(response) {
-                        console.log('Registration successful');
-                    },
-                    error: function(error) {
-                        console.log('Registration failed');
-                    }
-                });
-            });
-        });
-    </script>
-    
 </body>
+
 </html>
