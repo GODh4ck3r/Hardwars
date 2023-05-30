@@ -17,6 +17,10 @@ mainRoute.get('/about',(req,res)=>{
     res.render('pages/about')
 })
 
+mainRoute.get('/gallery',(req,res)=>{
+    res.render('pages/gallery')
+})
+
 export default mainRoute
 
 
