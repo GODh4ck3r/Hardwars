@@ -5,6 +5,7 @@ const api = router()
 
 api.post("/team",async (req,res)=>{
     var teamData = req.body
+    // console.log(teamData)
     var data = await mainController.saveTeam(teamData)
     data.status? res.send(data) : res.status(404).send(data)
 })

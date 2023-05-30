@@ -20,6 +20,13 @@ $min-border-radius: 5px;
     z-index: 10;
     // margin-top: -5rem;
   }
+  #backlight{
+    position: absolute;
+    left: 0;top: 0;
+    height: 100%;width: 100%;
+    z-index: 11;
+    background-color: rgba($color: #101010, $alpha: 0.2);
+  }
 }
 
 * {
@@ -107,6 +114,7 @@ html,body{
     margin: 0 auto;
     width: fit-content;
     background-color:rgba($color: $Main-bgColor-Black, $alpha: 0.9);
+    border: 1px solid slategray;
     backdrop-filter: blur(3px);
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -129,6 +137,12 @@ html,body{
       } 
     }
   }
+}
+
+hr{
+  border: none;
+  margin: 1rem  0 0.5rem 0;
+  border-top: 4px dashed #eee;
 }
 
 button{
