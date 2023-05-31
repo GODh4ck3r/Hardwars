@@ -1,45 +1,184 @@
 @import "./colors";
-
-
-
-$min-height: calc(100% - 5rem);
-$min-border-radius: 5px;
-
-#mainBody {
-  margin-top: 5rem;
-  max-height: $min-height;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: calc(100% - 5rem);
-  position:relative;
-}
-
-* {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* Hide scrollbar */
+  /* Hide scrollbar */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-
-body {
-  background-color: $Main-bgColor-Primary;
-  color: $Main-textColor-Primary;
+#container #content {
+  text-align: center;
+  margin-top: 50px;
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.5rem 0 1rem 0;
+  row-gap: 3rem;
 }
 
-
-
-html,body{
-  overflow:hidden;
+#container #content #txt {
+  color: #141554c7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  row-gap: 0.5rem;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
-.removeScrollBar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  &::-webkit-scrollbar {
-    display: none;
+
+#container #content #txt span {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  color: #221d43b2;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  letter-spacing: 1px;
+}
+
+#container #content #txt p {
+  font-family: "Poppins";
+  margin: 0;
+  font-size: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#container #content #teamimg img {
+  border-radius: 8px;
+  width: 700px; 
+      object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#container #teamimg #teamImg:hover {opacity: 0.7;}
+
+#container #content #rowimg img {
+  border-radius: 8px;
+  width: 290px; 
+      object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#container #content #rowimg #firstImg1:hover {opacity: 0.7;}
+#container #content #rowimg #firstImg2:hover {opacity: 0.7;}
+#container #content #rowimg #firstImg3:hover {opacity: 0.7;}
+#container #content #rowimg #secondImg1:hover {opacity: 0.7;}
+#container #content #rowimg #secondImg2:hover {opacity: 0.7;}
+#container #content #rowimg #secondImg3:hover {opacity: 0.7;}
+#container #content #rowimg #thirdImg1:hover {opacity: 0.7;}
+#container #content #rowimg #thirdImg2:hover {opacity: 0.7;}
+#container #content #rowimg #thirdImg3:hover {opacity: 0.7;}
+#container #content #rowimg #fourthImg1:hover {opacity: 0.7;}
+#container #content #rowimg #fourthImg2:hover {opacity: 0.7;}
+#container #content #rowimg #fourthImg3:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+#container #content .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+#container #content .modal-content {
+  margin-top: 30px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#container #content #caption {
+  background: hsla(1, 1%, 1%, 0.6);
+  position: relative;
+  bottom: 49px;
+  margin: auto;
+  color: white;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  max-width: 700px;
+  font-family: "Comfortaa";
+  font-size: 1.5rem;
+
+}
+
+/* Add Animation */
+#container #content .modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+#container #content .close {
+  position: absolute;
+  top: 80px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#container #content .close:hover,
+#container #content .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  #container #content .modal-content {
+    width: 100%;
   }
 }
-
-
 
