@@ -9,6 +9,7 @@ mainRoute.get(['/','/home'],(req,res)=>{
 mainRoute.get('/register',(req,res)=>{
     res.render('pages/register')
 })
+
 mainRoute.get('/contact',(req,res)=>{
     res.render('pages/contact')
 })
@@ -21,6 +22,9 @@ mainRoute.get('/gallery',(req,res)=>{
     res.render('pages/gallery')
 })
 
+mainRoute.get('/topic',(req,res)=>{
+    res.render('pages/gallery')
+})
 export default mainRoute
 
 
