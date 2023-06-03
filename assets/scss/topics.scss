@@ -1,0 +1,62 @@
+@import "./colors";
+@import "./font";
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.section1 {
+    margin-top: 54rem; 
+    margin-bottom: 10px;
+    padding: 2rem; 
+}
+
+.section2 {
+    margin-bottom: 10px;
+    padding: 2rem;
+}
+
+.section1 h2,
+.section2 h2 {
+    font-size: 3rem;
+    font-family: 'Pirata One';
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -2%; 
+    margin-right: -2%; 
+}
+
+.box {
+    width: 20%; 
+    height: 13rem;
+    background-color: #f1f1f1;
+    border-radius: 0.8rem; 
+    margin: 2%; 
+    padding: 2rem;
+    box-sizing: border-box; 
+    position: relative; 
+    padding-top: 3rem; 
+    transition: transform 0.3s ease; 
+}
+
+.box:hover {
+    transform: scale(1.05); 
+}
+
+.box-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 0.7rem;
+    border-radius: 0.8rem 0 0.8rem 0;
+}
