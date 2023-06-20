@@ -16,62 +16,76 @@
 <body>
     <%- include('../partials/header.ejs')%>
         <section id="mainBody">
-            <img src="/images/back1.png" alt="">
-            <div id="backlight"></div>
-            <div class="form-box removeScrollBar">
-                <form id="regForm">
-                    <div class="box teamBox">
-                        <div class="inputBox">
-                            <label for="mentorName">Mentor Name</label>
-                            <input type="text" id="mentorName" name="mentorName" required>
-                        </div>
-                        <div class="inputBox">
-                            <label for="teamName">Team Name</label>
-                            <input type="text" id="teamName" name="teamName" required>
-                        </div>
-                        <div class="inputBox">
-                            <label>Topic</label>
-                            <select id="selectBox" name="topic" class="wide">
-                                <option value="Loading">Loading ...</option>
-                            </select>
-                        </div>
+            <div id="form-box-wapper">
+                <div id="imgWapper">
+                    <img class="form-box-img" src="/images/registerImg.png" alt="">
+                    <div class="form-box-backBnt">
+                        <img src="/images/back-svgrepo-com.svg" alt="">
+                        <a href="/home">Home</a>
                     </div>
-                    <hr>
-                    <div id="members">
-                        <% for (var i=1; i <=4; i++ ) { %>
-                            <div class="box">
-                                <h2>Member <%= i %>
-                                </h2>
-                                <div class="member-box-grid">
-                                    <div class="inputBox">
-                                        <label for="member-name-<%= i %>">Name</label>
-                                        <input type="text" id="member-name-<%= i %>" name="member-name-<%= i %>" required>
-                                    </div>
-                                    <div class="inputBox">
-                                        <label for="college-<%= i %>">College</label>
-                                        <input type="text" id="college-<%= i %>" name="college-<%= i %>" required>
-                                    </div>
-                                    <div class="inputBox">
-                                        <label for="city-<%= i %>">City</label>
-                                        <input type="text" id="city-<%= i %>" name="city-<%= i %>" required>
-                                    </div>
-                                    <div class="inputBox">
-                                        <label for="mobile-<%= i %>">Mobile Number</label>
-                                        <input type="text" id="mobile-<%= i %>" name="mobile-<%= i %>" required>
-                                    </div>
-                                    <div class="inputBox">
-                                        <label for="email-<%= i %>">Email</label>
-                                        <input type="email" id="email-<%= i %>" name="email-<%= i %>" required>
+                </div>
+                <div class="form-box removeScrollBar">
+                    <h1>Register Here</h1>
+                    <form id="regForm">
+                        <div class="box teamBox">
+                            <div class="inputBox">
+                                <label for="mentorName">Mentor Name</label>
+                                <input type="text" id="mentorName" name="mentorName" required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="teamName">Team Name</label>
+                                <input type="text" id="teamName" name="teamName" required>
+                            </div>
+                            <div class="inputBox">
+                                <label>Topic</label>
+                                <select id="selectBox" name="topic" class="wide">
+                                    <option value="Loading">Loading ...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- <hr> -->
+                        <div id="members">
+                            <% for (var i=1; i <=4; i++ ) { %>
+                                <div class="box">
+                                    <h2>Member <%= i %>
+                                    </h2>
+                                    <div class="member-box-grid">
+                                        <div class="inputBox">
+                                            <label for="member-name-<%= i %>">Name</label>
+                                            <input type="text" id="member-name-<%= i %>" name="member-name-<%= i %>" required>
+                                        </div>
+                                        <div class="inputBox">
+                                            <label for="college-<%= i %>">College</label>
+                                            <input type="text" id="college-<%= i %>" name="college-<%= i %>" required>
+                                        </div>
+                                        <div class="inputBox">
+                                            <label for="city-<%= i %>">City</label>
+                                            <input type="text" id="city-<%= i %>" name="city-<%= i %>" required>
+                                        </div>
+                                        <div class="inputBox">
+                                            <label for="mobile-<%= i %>">Mobile Number</label>
+                                            <input type="text" id="mobile-<%= i %>" name="mobile-<%= i %>" required>
+                                        </div>
+                                        <div class="inputBox">
+                                            <label for="email-<%= i %>">Email</label>
+                                            <input type="email" id="email-<%= i %>" name="email-<%= i %>" required>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <% } %>
-                    </div>
-
-                    <div style="display: flex;justify-content: flex-end; align-items: center;">
-                        <button type="button" id="subBnt">Register</button>
-                    </div>
-                </form>
+                                <% } %>
+                        </div>
+    
+                        <div style="display: flex;justify-content: flex-end; align-items: center;">
+                            <button type="button" id="subBnt">
+                                Register
+                                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.3005 30.908C25.0245 30.632 24.892 30.2985 24.903 29.9074C24.9141 29.5164 25.058 29.1829 25.335 28.9069L29.2337 25.0082H13.8459C13.4549 25.0082 13.1269 24.8757 12.8619 24.6107C12.5969 24.3458 12.4649 24.0182 12.4658 23.6281C12.4658 23.2371 12.5983 22.9091 12.8633 22.6441C13.1283 22.3792 13.4558 22.2471 13.8459 22.2481H29.2337L25.3005 18.3149C25.0245 18.0388 24.8865 17.7108 24.8865 17.3309C24.8865 16.9509 25.0245 16.6233 25.3005 16.3483C25.5765 16.0722 25.9045 15.9342 26.2845 15.9342C26.6644 15.9342 26.992 16.0722 27.2671 16.3483L33.5809 22.6621C33.7189 22.8001 33.8169 22.9496 33.8749 23.1106C33.9328 23.2716 33.9613 23.4441 33.9604 23.6281C33.9604 23.8121 33.9314 23.9846 33.8735 24.1457C33.8155 24.3067 33.718 24.4562 33.5809 24.5942L27.2326 30.9425C26.9796 31.1955 26.6635 31.322 26.2845 31.322C25.9054 31.322 25.5774 31.184 25.3005 30.908Z" fill="white"/>
+                                </svg>
+                                    
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
 

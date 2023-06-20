@@ -8,6 +8,10 @@ $min-border-radius: 5px;
   min-height: $min-height;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+}
+.homeNavLink{
+  display: none !important;
 }
 #section1 {
   min-height: $min-height;
@@ -595,3 +599,33 @@ $min-border-radius: 5px;
     stroke-width: 0px;
   }
 }
+
+
+// media query
+@media only screen and (width <= 992px) {
+  #section1__right{
+    display: none;
+  }
+  #section1__left__buttongroup{
+    transform: translateX(-10%) !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media only screen and (width <= 600px) {
+  #section1__left{
+    h1{
+      font-size: 5rem !important;
+      line-height: normal !important;
+    }
+  }
+  .backImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+
+}
+

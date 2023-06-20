@@ -38,7 +38,15 @@ p{
     margin: 0;
     padding: 0;
 }
-
+#navBarBackLight{
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: $Main-bgColor-Secondary, $alpha: 0.8);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+}
 header{
     position: fixed;
     top: 0;left: 0;
@@ -52,6 +60,7 @@ header{
     color: $Main-textColor-Primary;
     display: flex;
     padding: 0.2rem 1rem;
+    z-index: 1000;
     // box-shadow: 0 1px 10px 0px white;
     #links{
         flex:1;
@@ -131,8 +140,58 @@ header{
 .allHidden{
     display: none !important;
 }
+#menuBarBnt{
+    height: 3rem;
+    width: auto;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+}
 
 #mainLogo{
     height: 100%;
     width: auto;
 }
+
+
+// responsive
+@media only screen and (width <= 600px) {
+    header {
+        flex-direction: column !important;
+        #links{
+            display: none !important;
+        }
+        &.navResponsive{
+            #links{
+                display: flex !important;
+            }
+        }
+    }
+    #menuBarBnt{
+        display: block !important;
+    }
+    #links{
+        position: absolute;
+        bottom: 0;left: 0;
+        transform: translateY(100%);
+        flex-direction: column;
+        gap: 1rem;
+        background-color: $Main-bgColor-Black;
+        // background-color: darken($color: $Main-bgColor-Black, $amount: 10);
+        width: 100%;
+        padding-top: 1.4rem;
+        padding-bottom: 2rem;
+    }
+    #registerLinkBnt,#topicLink{
+        display: none !important;
+    }
+    #topicLink2,#registerLink2{
+        display: inline-block !important;
+    }
+    
+}
+
+

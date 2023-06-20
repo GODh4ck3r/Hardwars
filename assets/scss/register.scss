@@ -13,20 +13,6 @@ $min-border-radius: 5px;
   align-items: center;
   height: calc(100% - 5rem);
   position:relative;
-  img{
-    position: absolute;
-    left: 0;top: 0;
-    height: 100%;width: 100%;
-    z-index: 10;
-    // margin-top: -5rem;
-  }
-  #backlight{
-    position: absolute;
-    left: 0;top: 0;
-    height: 100%;width: 100%;
-    z-index: 11;
-    background-color: rgba($color: #101010, $alpha: 0.2);
-  }
 }
 
 * {
@@ -47,26 +33,92 @@ html,body{
   overflow:hidden;
 }
 
+
+#form-box-wapper{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-left: none;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 1rem 0;
+  color: black;
+  box-shadow: 0 0 10px 0px slategray;
+  // align-items: center;
+  // background-color: $Main-bgColor-Black;
+}
+.bnt-style-1,.homeNavLink{
+  display: none !important;
+}
+#imgWapper{
+  position: relative;
+  .form-box-img{
+    width: 22vw;
+    object-fit: cover;
+    height: 100%;
+    // background-color: #424040;
+  }
+  .form-box-backBnt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 1rem;left: 1.3rem;
+    height: 1rem;
+    width: auto;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 300ms;
+    &:hover{
+      opacity: 1;
+    }
+    a{
+      font-family: 'Poppins';
+      font-size: 1.1rem;
+    }
+    img{
+      height: 1.1rem;
+      width: auto;
+    }
+  }
+}
+
+
 .form-box{
   z-index: 100;
   font-family: Quicksand;
   overflow: scroll;
-  padding-top: 10rem;
   width: 100%;
   label,input{
     font-size: 1rem;
     display: table-cell;
   }
   label{
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.1rem;
     vertical-align: middle;
+  }
+  h1{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
   .nice-select{
     background-color: rgba($color: #D9D9D9, $alpha: 0.3);
     color: $Main-textColor-Primary;
     border: none;
     border-radius: 3px;
+    span{
+      color: #010001;
+    }
     li,span{
       font-size: 1.1rem;
       font-weight: 400;
@@ -86,11 +138,16 @@ html,body{
 
   input{
     border: none;
-    border-radius: 2px 2px 0 0;
-    border-bottom: 1px solid #ffffff;
+    // border-radius: 2px 2px 0 0;
+    border-radius: 5px;
+    border: 1px solid #B5BEC4;
     padding: 0.5rem 0.3rem;
-    background-color: rgba($color: #D9D9D9, $alpha: 0.3);
-    color: $Main-textColor-Primary;
+    // background-color: rgba($color: #D9D9D9, $alpha: 0.3);
+    background-color: #e7e6e9;
+    // color: $Main-textColor-Primary;
+    color: #010001;
+    font-family: inherit;
+    font-weight: 500;
     &:focus{
       outline: none;
     }
@@ -100,6 +157,7 @@ html,body{
     font-size: 1.7rem;
     position: relative;
     width: fit-content;
+    font-weight: 600;
     &:after{
       content: '';
       position: absolute;
@@ -111,13 +169,11 @@ html,body{
     }
   }
   #regForm{
-    margin: 0 auto;
     width: fit-content;
-    background-color:rgba($color: $Main-bgColor-Black, $alpha: 0.9);
-    border: 1px solid slategray;
+    // background-color:rgba($color: $Main-bgColor-Black, $alpha: 1);
+    background-color: $Main-bgColor-Primary;
     backdrop-filter: blur(3px);
     padding: 1rem 2rem;
-    border-radius: 5px;
     .inputBox{
       display: table-row;
       // background-color: cornflowerblue;
@@ -142,26 +198,40 @@ html,body{
 hr{
   border: none;
   margin: 1rem  0 0.5rem 0;
-  border-top: 4px dashed #eee;
+  border-top: 4px dashed #010001;
 }
 
 button{
   // border: none;
   border-radius: 5px;
   border: 2px solid #eee;
-  background-color: transparent;
-  padding: 0.5rem 1rem;
+  background-color: #010001;
+  padding: 0.3rem 1rem;
   color: #eee;
   font-weight: 500;
   font-size: 1.2rem;
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
   transition: all 200ms;
   font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  svg{
+    height: 2.3rem;
+    width: auto;
+  }
   &:hover{
-    background-color: #eee;
+    background-color: transparent;
     color: #010001;
-    // border-color: #0091f4;
+    border: 1px solid black;
+    svg{
+      path{
+        fill: black
+      }
+    }
   }
 }
 

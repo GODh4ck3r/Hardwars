@@ -1,62 +1,49 @@
 @import "./colors";
 @import "./font";
+
+
+$min-height: calc(100% - 5rem);
+$min-border-radius: 5px;
+
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    min-height: $min-height;
+    padding-top: 5rem;
     overflow: auto;
+    font-family: 'Poppins';
+    .section{
+        padding: 0.5rem 1rem;
+        h2{
+            font-size: 3rem;
+            font-family: 'Pirata One';
+        }
+        .boxes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            .box{
+                position: relative;
+                .box-title{
+                    color: $Main-textColor-Primary;
+                    background-color: $Main-bgColor-Secondary;
+                    position: absolute;
+                    top: -1rem;left: -0.5rem;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 2px;
+                }
+                width: 300px;
+                cursor: pointer;
+                background-color: #E6E7E9;
+                padding: 1rem;
+                border-radius: $min-border-radius;
+                transition: transform 300ms;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
 }
 
-.section1 {
-    margin-top: 54rem; 
-    margin-bottom: 10px;
-    padding: 2rem; 
-}
 
-.section2 {
-    margin-bottom: 10px;
-    padding: 2rem;
-}
-
-.section1 h2,
-.section2 h2 {
-    font-size: 3rem;
-    font-family: 'Pirata One';
-}
-
-.boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: -2%; 
-    margin-right: -2%; 
-}
-
-.box {
-    width: 20%; 
-    height: 13rem;
-    background-color: #f1f1f1;
-    border-radius: 0.8rem; 
-    margin: 2%; 
-    padding: 2rem;
-    box-sizing: border-box; 
-    position: relative; 
-    padding-top: 3rem; 
-    transition: transform 0.3s ease; 
-}
-
-.box:hover {
-    transform: scale(1.05); 
-}
-
-.box-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 0.7rem;
-    border-radius: 0.8rem 0 0.8rem 0;
-}
